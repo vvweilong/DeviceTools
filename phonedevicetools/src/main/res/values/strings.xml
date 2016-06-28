@@ -1,0 +1,4 @@
+<resources>
+    <string name = "app_name">PhoneDeviceTools</string>
+    <string name = "valusename">default</string>
+</resources>

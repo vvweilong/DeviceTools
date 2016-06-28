@@ -1,0 +1,5 @@
+<resources>
+    <string name = "app_name">PhoneDeviceTools</string>
+
+    <string name = "valusename">1280 720 </string>
+</resources>
