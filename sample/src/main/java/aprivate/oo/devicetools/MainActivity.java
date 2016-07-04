@@ -41,14 +41,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void fileInfor(){
-        try {
-            FileTool.createFile("abc.txt");
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
 
-    }
 
 }

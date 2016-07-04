@@ -48,6 +48,7 @@ public class StringFormateTool extends BaseTool{
 
 
     private static boolean isAlphe(char c) {
+
         if (c >= 'A' && c <= 'z') {
             return true;
         }

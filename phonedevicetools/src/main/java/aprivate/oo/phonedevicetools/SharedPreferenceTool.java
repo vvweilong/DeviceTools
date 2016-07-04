@@ -27,8 +27,6 @@ public class SharedPreferenceTool  extends BaseTool{
 
 
     /*用户登录信息*/
-
-
     private SharedPreferences getLoginInfor(Context context) throws NullPointerException{//获取登录用户 信息sp对象
       return context.getSharedPreferences(LOGIN_INFOR,Context.MODE_PRIVATE);
     }
@@ -36,7 +34,6 @@ public class SharedPreferenceTool  extends BaseTool{
 
 
     /*用户设置信息*/
-
     private SharedPreferences getUserSettinInfor(Context context) throws NullPointerException{//获取 系统设置 sp对象
         return context.getSharedPreferences(Setting_INFOR,Context.MODE_PRIVATE);
     }

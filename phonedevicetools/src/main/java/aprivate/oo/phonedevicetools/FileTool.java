@@ -13,23 +13,23 @@ import java.io.IOException;
  * Created by zhuxiaolong on 16/5/13.
  */
 public class FileTool extends BaseTool {
-    private static String TAG="FileTool";
+    private  String TAG="FileTool";
 
-    static File rootDirectory = Environment.getExternalStorageDirectory();
-    static String rootDirectoryPath = rootDirectory.getPath();
+     File rootDirectory = Environment.getExternalStorageDirectory();
+     String rootDirectoryPath = rootDirectory.getPath();
 
 
     /*创建 文件*/
-    public static File createFile(String fileName) throws IOException {
+    public  File createFile(String fileName) throws IOException {
         return createFile(fileName, rootDirectoryPath);
     }
 
 
-    private static File createFile(String fileName, File dir) throws IOException {
+    private  File createFile(String fileName, File dir) throws IOException {
         return createFile(fileName, dir.getPath());
     }
 
-    private static File createFile(String fileName, String dirPath) throws IOException {
+    private  File createFile(String fileName, String dirPath) throws IOException {
         File file = new File(dirPath + "/" + fileName);
         if (!file.exists()) {
             file.createNewFile();
@@ -43,7 +43,7 @@ public class FileTool extends BaseTool {
      * 指定名字创建目录 目录在默认路径下
      * @param name 目录的名字
      * */
-    public static File createDirectory(String name) throws IOException {
+    public  File createDirectory(String name) throws IOException {
 
         File dir = new File(rootDirectoryPath + "/" + name + "/");
         if (!dir.exists()) {
@@ -54,7 +54,7 @@ public class FileTool extends BaseTool {
     }
 
 
-    private static File createDirectory(String fileName, File dir) throws IOException {
+    private  File createDirectory(String fileName, File dir) throws IOException {
         return createFile(fileName, dir.getPath());
     }
 
@@ -64,7 +64,7 @@ public class FileTool extends BaseTool {
      *
      *
      * */
-    private static File createDirectory(String fileName, String dirPath) throws IOException {
+    private  File createDirectory(String fileName, String dirPath) throws IOException {
         File file = new File(dirPath + "/" + fileName);
         if (!file.exists()) {
             file.createNewFile();
@@ -82,7 +82,7 @@ public class FileTool extends BaseTool {
      * @param file 要删除的文件对象
      * @return true 删除成功 false 文件不存在 或 删除失败
      * */
-    public static boolean deleteFile(@NonNull File file) {
+    public  boolean deleteFile(@NonNull File file) {
         if (file.exists()) {
             return file.delete();
         }
@@ -95,7 +95,7 @@ public class FileTool extends BaseTool {
      * @param fileName 要删除的文件名 在默认目录下
      * @return true 删除成功  false 文件不存在 或 删除失败
      * */
-    public static boolean deleteFile(String fileName) {
+    public  boolean deleteFile(String fileName) {
         return deleteFile(fileName, rootDirectoryPath);
     }
     /**
@@ -104,12 +104,12 @@ public class FileTool extends BaseTool {
      * @param dirPath 指定文件所在的文件夹
      * @return true 删除成功，false 目录下文件不存在 或 删除失败
      * */
-    private static boolean deleteFile(String fileName, String dirPath) {
+    private  boolean deleteFile(String fileName, String dirPath) {
         File targetFile = new File(dirPath + "/" + fileName);
         return deleteFile(targetFile);
     }
 
-    private static File openFile(String path){
+    private  File openFile(String path){
         File file=new File(path);
         if(file.exists()){
             return file;
@@ -124,11 +124,15 @@ public class FileTool extends BaseTool {
      *
      * */
 
-    public static void writeStringToFile(String contain,String filepath){
+    public  void writeStringToFile(String contain,String filepath){
         File file=openFile(filepath);
-        
-
     }
 
+
+
+
+    public String getDownloadPath(){
+        return null;
+    }
 
 }
